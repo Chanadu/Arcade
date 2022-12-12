@@ -19,7 +19,7 @@ public class TitleScreen extends JPanel {
 			titleFont =
 					Font.createFont(Font.TRUETYPE_FONT, new File("src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 60);
 			buttonFont =
-					Font.createFont(Font.TRUETYPE_FONT, new File("src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 30);
+					Font.createFont(Font.TRUETYPE_FONT, new File("src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 25);
 		} catch (IOException | FontFormatException e) {
 			System.out.println("No font found");
 		}

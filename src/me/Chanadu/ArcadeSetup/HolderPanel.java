@@ -34,7 +34,6 @@ public class HolderPanel extends JPanel {
 	
 	public void changeScreen(String screenName) {
 		removeAll();
-		System.out.print(stringToPanel.get(screenName));
 		add(stringToPanel.get(screenName));
 		frame.reRender();
 	}

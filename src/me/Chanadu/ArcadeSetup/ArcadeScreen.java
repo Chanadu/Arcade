@@ -6,10 +6,13 @@ import java.awt.*;
 public class ArcadeScreen extends JPanel {
 	HolderPanel holderPanel;
 	
+	JPanel[][] gamePanels = new JPanel[3][2];
+	
 	ArcadeScreen(HolderPanel holderPanel) {
 		this.holderPanel = holderPanel;
 		setFocusable(true);
 		setPreferredSize(ArcadeFrame.SCREEN_SIZE);
-		setBackground(Color.BLUE);
+		setLayout(new BorderLayout());
+		setBackground(Color.BLACK);
 	}
 }

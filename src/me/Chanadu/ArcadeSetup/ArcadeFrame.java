@@ -1,5 +1,7 @@
 package me.Chanadu.ArcadeSetup;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,6 +16,11 @@ public class ArcadeFrame extends JFrame {
 		setResizable(false);
 		setBackground(Color.BLACK);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		try {
+			UIManager.setLookAndFeel(new FlatDarkLaf());
+		} catch (Exception e) {
+			System.out.println("Line 18 failed");
+		}
 		
 		holderPanel = new HolderPanel(this);
 		add(holderPanel);
