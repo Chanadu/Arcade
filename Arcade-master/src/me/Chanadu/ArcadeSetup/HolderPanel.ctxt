@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=HolderPanel
+comment1.params=frame
+comment1.target=HolderPanel(ArcadeFrame)
+comment2.params=
+comment2.target=void\ setUpStringToPanel()
+comment3.params=screenName
+comment3.target=void\ changeScreen(java.lang.String)
+numComments=4

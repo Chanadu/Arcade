@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ArcadeScreen
+comment1.params=holderPanel
+comment1.target=ArcadeScreen(HolderPanel)
+comment2.params=
+comment2.target=void\ setUpPanels()
+numComments=3

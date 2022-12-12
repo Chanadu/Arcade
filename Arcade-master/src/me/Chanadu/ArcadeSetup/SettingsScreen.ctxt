@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=SettingsScreen
+comment1.params=holderPanel
+comment1.target=SettingsScreen(HolderPanel)
+comment2.params=
+comment2.target=void\ initComponents()
+comment3.params=evt
+comment3.target=void\ difficultyComboBoxActionPerformed(java.awt.event.ActionEvent)
+comment4.params=evt
+comment4.target=void\ specialCodesTextFieldActionPerformed(java.awt.event.ActionEvent)
+comment5.params=evt
+comment5.target=void\ exitButtonActionPerformed(java.awt.event.ActionEvent)
+comment6.params=evt
+comment6.target=void\ movementToggleActionPerformed(java.awt.event.ActionEvent)
+comment7.params=evt
+comment7.target=void\ jCheckBoxActionPerformed(java.awt.event.ActionEvent)
+numComments=8
