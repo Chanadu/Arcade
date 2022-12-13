@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=SnakePanel
+comment1.params=holderPanel
+comment1.target=SnakePanel(me.Chanadu.ArcadeSetup.HolderPanel)
+comment10.params=e
+comment10.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=
+comment2.target=void\ startGame()
+comment3.params=g
+comment3.target=void\ paintComponent(java.awt.Graphics)
+comment4.params=g
+comment4.target=void\ draw(java.awt.Graphics)
+comment5.params=
+comment5.target=void\ newApple()
+comment6.params=
+comment6.target=void\ move()
+comment7.params=
+comment7.target=void\ checkApple()
+comment8.params=
+comment8.target=void\ CheckCollisions()
+comment9.params=g
+comment9.target=void\ gameOver(java.awt.Graphics)
+numComments=11
