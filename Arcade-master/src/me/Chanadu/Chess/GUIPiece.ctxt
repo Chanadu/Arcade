@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=GUIPiece
+comment1.params=pieceImage
+comment1.target=GUIPiece(javax.swing.ImageIcon)
+numComments=2

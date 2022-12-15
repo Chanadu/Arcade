@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=BoardSquarePanel
+comment1.params=x\ y\ color\ boardPanel
+comment1.target=BoardSquarePanel(int,\ int,\ java.awt.Color,\ ChessBoardPanel)
+comment2.params=
+comment2.target=void\ addMouseAdapter()
+comment3.params=e
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=i\ j
+comment4.target=void\ castlingMovement(int,\ int)
+comment5.params=
+comment5.target=void\ promotionMovement()
+comment6.params=i\ j
+comment6.target=void\ reloadSquare(int,\ int)
+comment7.params=
+comment7.target=void\ checkGameStates()
+comment8.params=
+comment8.target=boolean\ getMoving()
+comment9.params=moving
+comment9.target=void\ setMoving(boolean)
+numComments=10

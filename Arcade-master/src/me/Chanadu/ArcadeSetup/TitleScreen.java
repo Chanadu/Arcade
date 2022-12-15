@@ -17,9 +17,9 @@ public class TitleScreen extends JPanel {
         this.holderPanel = holderPanel;
         try {
             titleFont =
-                    Font.createFont(Font.TRUETYPE_FONT, new File("src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 60);
+                    Font.createFont(Font.TRUETYPE_FONT, new File("/Users/cpedda26/Desktop/Arcade-master/src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 60);
             buttonFont =
-                    Font.createFont(Font.TRUETYPE_FONT, new File("src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 25);
+                    Font.createFont(Font.TRUETYPE_FONT, new File("/Users/cpedda26/Desktop/Arcade-master/src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 25);
         } catch (IOException | FontFormatException e) {
             System.out.println("No font found");
             titleFont = new Font("DialogInput", Font.BOLD, 60);
@@ -92,17 +92,14 @@ public class TitleScreen extends JPanel {
     }
     
     private void settingsButtonActionPerformed(ActionEvent evt) {
-        System.out.println("SettingsButtonActionPerformed");
         holderPanel.changeScreen("settingsScreen");
     }
     
     private void creditsButtonActionPerformed(ActionEvent evt) {
-        System.out.println("CreditsButtonActionPerformed");
         holderPanel.changeScreen("creditsScreen");
     }
     
     private void playButtonActionPerformed(ActionEvent evt) {
-        System.out.println("PlayButtonActionPerformed");
         holderPanel.changeScreen("arcadeScreen");
     }
 }

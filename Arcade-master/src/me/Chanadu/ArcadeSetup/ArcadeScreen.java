@@ -1,16 +1,19 @@
 package me.Chanadu.ArcadeSetup;
 
+import me.Chanadu.snake.*;
+import me.Chanadu.Chess.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ArcadeScreen extends JPanel {
+public class ArcadeScreen extends JPanel{
     HolderPanel holderPanel;
     JPanel gamePanelHolder = new JPanel();
     JPanel[][] gamePanels = new JPanel[2][3];
     GridLayout layout = new GridLayout(2, 3);
     
-    ArcadeScreen(HolderPanel holderPanel) {
+        ArcadeScreen(HolderPanel holderPanel){
         this.holderPanel = holderPanel;
         setFocusable(true);
         setPreferredSize(ArcadeFrame.SCREEN_SIZE);
@@ -20,7 +23,12 @@ public class ArcadeScreen extends JPanel {
         
         
         gamePanels[0][0].add(new JLabel("Chess"));
-        
+         gamePanels[0][0].addMouseListener(new MouseAdapter() {
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    JFrame f = new ChessGUI();
+                }
+            });
         gamePanels[0][1].add(new JLabel("Minesweeper"));
         gamePanels[0][2].add(new JLabel("Pong"));
         gamePanels[1][0].add(new JLabel("Slider Puzzle"));
@@ -29,7 +37,7 @@ public class ArcadeScreen extends JPanel {
         gamePanels[1][1].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
-                    holderPanel.changeScreen("snakeScreen");
+                    JFrame f = new SnakeFrame();
                 }
             });
         gamePanels[1][2].add(new JLabel("Scramble"));
