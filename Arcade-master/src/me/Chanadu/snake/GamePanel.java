@@ -16,8 +16,8 @@ import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener {
 
-    static final int SCREEN_WIDTH = 600;
-    static final int SCREEN_HEIGHT = 600;
+    static final int SCREEN_WIDTH = 1000;
+    static final int SCREEN_HEIGHT = 950;
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH * SCREEN_HEIGHT) / UNIT_SIZE;
     static final int DELAY = 75;
@@ -90,7 +90,13 @@ public class GamePanel extends JPanel implements ActionListener {
     public void newApple() {
         appleX = random.nextInt((int) (SCREEN_WIDTH / UNIT_SIZE)) * UNIT_SIZE;
         appleY = random.nextInt((int) (SCREEN_HEIGHT / UNIT_SIZE)) * UNIT_SIZE;
-
+        if  (appleX / UNIT_SIZE > (SCREEN_WIDTH / UNIT_SIZE) - 2 || 
+             appleX / UNIT_SIZE < 2 || 
+             appleY / UNIT_SIZE > (SCREEN_HEIGHT / UNIT_SIZE) - 2 || 
+             appleY / UNIT_SIZE < 2) {
+            newApple();
+            //System.out.println("Bad APple");
+        }
     }
 
     public void move() {
@@ -127,19 +133,19 @@ public class GamePanel extends JPanel implements ActionListener {
 
         // check if head touches left border
         if(x[0] < 0) {
-            x[0] = SCREEN_WIDTH - UNIT_SIZE;
+            running = false;
         }
         //check if head touches right border
-        else if(x[0] > SCREEN_WIDTH) {
-            x[0] = UNIT_SIZE;
+        if(x[0] > SCREEN_WIDTH) {
+            running = false;
         }
         //check if head touches top border
         if(y[0] < 0) {
-            y[0] = SCREEN_HEIGHT - UNIT_SIZE;
+            running = false;
         }
         //check if head touches bottom border
         else if(y[0] > SCREEN_HEIGHT) {
-            y[0] = UNIT_SIZE;
+            running = false;
         }
         
         

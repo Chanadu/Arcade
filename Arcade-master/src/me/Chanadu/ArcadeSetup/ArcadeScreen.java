@@ -21,18 +21,28 @@ public class ArcadeScreen extends JPanel{
         setBackground(Color.BLACK);
         setUpPanels();
         
-        
-        gamePanels[0][0].add(new JLabel("Chess"));
+        Font font = new Font("Arial", Font.BOLD, 30);
+        JLabel c = new JLabel("Chess");
+        c.setFont(font);
+        gamePanels[0][0].add(c);
          gamePanels[0][0].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
                     JFrame f = new ChessGUI();
                 }
             });
-        gamePanels[0][1].add(new JLabel("Minesweeper"));
-        gamePanels[0][2].add(new JLabel("Pong"));
-        gamePanels[1][0].add(new JLabel("Slider Puzzle"));
-        gamePanels[1][1].add(new JLabel("Snake"));
+        JLabel WIP = new JLabel("WIP");
+        WIP.setFont(font);
+        gamePanels[0][1].add(WIP);
+        WIP = new JLabel("WIP");
+        WIP.setFont(font);
+        gamePanels[0][2].add(WIP);
+        WIP = new JLabel("WIP");
+        WIP.setFont(font);
+        gamePanels[1][0].add(WIP);
+        JLabel snake = new JLabel("Snake");
+        snake.setFont(font);
+        gamePanels[1][1].add(snake);
         
         gamePanels[1][1].addMouseListener(new MouseAdapter() {
                 @Override
@@ -40,7 +50,9 @@ public class ArcadeScreen extends JPanel{
                     JFrame f = new SnakeFrame();
                 }
             });
-        gamePanels[1][2].add(new JLabel("Scramble"));
+        WIP = new JLabel("WIP");
+        WIP.setFont(font);
+        gamePanels[1][2].add(WIP);
         
         add(gamePanelHolder);
     }
@@ -54,6 +66,7 @@ public class ArcadeScreen extends JPanel{
         for (int i = 0; i < gamePanels.length; i++) {
             for (int j = 0; j < gamePanels[0].length; j++) {
                 gamePanels[i][j] = new JPanel();
+                gamePanels[i][j].setLayout(new GridBagLayout());
                 gamePanels[i][j].setBackground(Color.BLUE);
                 gamePanels[i][j].setFocusable(true);
                 gamePanelHolder.add(gamePanels[i][j]);

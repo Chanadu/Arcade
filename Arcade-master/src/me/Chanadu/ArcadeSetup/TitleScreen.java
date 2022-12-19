@@ -21,7 +21,7 @@ public class TitleScreen extends JPanel {
             buttonFont =
                     Font.createFont(Font.TRUETYPE_FONT, new File("/Users/cpedda26/Desktop/Arcade-master/src/me/Chanadu/Assets/ARCADE_N.TTF")).deriveFont(Font.BOLD, 25);
         } catch (IOException | FontFormatException e) {
-            System.out.println("No font found");
+            //System.out.println("No font found");
             titleFont = new Font("DialogInput", Font.BOLD, 60);
             buttonFont = new Font("DialogInput", Font.BOLD, 25);
         }

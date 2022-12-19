@@ -31,9 +31,22 @@ public class SliderPanel extends JPanel implements KeyListener
             }
         }
         
-        remove(panels[2][2]);
+        remove(panels[3][3]);
         add(emptyPanel);
         emptyPanel.setBackground(Color.YELLOW);
+    }
+    
+    void reDrawPanels() {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                remove(panels[i][j]);
+            }
+        }
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                add(panels[i][j]);
+            }
+        }
     }
     
     @Override public void keyPressed(KeyEvent e) {
@@ -41,11 +54,10 @@ public class SliderPanel extends JPanel implements KeyListener
             if (openPanel[1] == 0) {
                 return;
             }
-            
-            remove(panels[openPanel[0]][openPanel[1] - 1]);
-            remove(emptyPanel);
-            add(emptyPanel);
-            add(panels[openPanel[0]][openPanel[1]]);
+            System.out.println("Not returned");
+            panels[openPanel[0]][openPanel[1]] = panels[openPanel[0]][openPanel[1] - 1];
+            panels[openPanel[0]][openPanel[1] - 1] = emptyPanel;
+            reDrawPanels();
        }
         
         if (e.getKeyCode() == KeyEvent.VK_UP) {
