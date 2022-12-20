@@ -25,6 +25,7 @@ public class ArcadeScreen extends JPanel{
         JLabel c = new JLabel("Chess");
         c.setFont(font);
         gamePanels[0][0].add(c);
+        gamePanels[0][0].add(new JLabel("(In Beta)"));
          gamePanels[0][0].addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
@@ -43,6 +44,7 @@ public class ArcadeScreen extends JPanel{
         JLabel snake = new JLabel("Snake");
         snake.setFont(font);
         gamePanels[1][1].add(snake);
+        gamePanels[1][1].add(new JLabel("(In Beta)"));
         
         gamePanels[1][1].addMouseListener(new MouseAdapter() {
                 @Override
