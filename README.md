@@ -1,5 +1,3 @@
 # Arcade
-dont use this for anything
-None of this code is any good anyway
 
-#Written in Java Swing
+Written in Java Swing for Introduction to Java Class
